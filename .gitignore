@@ -1,0 +1,7 @@
+.idea
+node_modules
+.vscode
+.vs
+bin
+obj
+appsettings*
