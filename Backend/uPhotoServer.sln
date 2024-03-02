@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uPhoto.API", "uPhoto.API\uPhoto.API.csproj", "{585C92F5-76A2-4D67-AD76-94A06BECD060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uPhoto.Common", "uPhoto.Common\uPhoto.Common.csproj", "{1BDE6866-6B61-491C-ABA6-97F5A9DCDF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uPhoto.Business", "uPhoto.Business\uPhoto.Business.csproj", "{314E4EFF-35C5-43C0-8CAC-D274FF4641FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uPhoto.Database", "uPhoto.Database\uPhoto.Database.csproj", "{4909B505-EFF9-4CB8-92EF-DC6C7DCA0659}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{585C92F5-76A2-4D67-AD76-94A06BECD060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585C92F5-76A2-4D67-AD76-94A06BECD060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585C92F5-76A2-4D67-AD76-94A06BECD060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585C92F5-76A2-4D67-AD76-94A06BECD060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDE6866-6B61-491C-ABA6-97F5A9DCDF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDE6866-6B61-491C-ABA6-97F5A9DCDF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDE6866-6B61-491C-ABA6-97F5A9DCDF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDE6866-6B61-491C-ABA6-97F5A9DCDF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314E4EFF-35C5-43C0-8CAC-D274FF4641FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314E4EFF-35C5-43C0-8CAC-D274FF4641FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314E4EFF-35C5-43C0-8CAC-D274FF4641FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314E4EFF-35C5-43C0-8CAC-D274FF4641FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4909B505-EFF9-4CB8-92EF-DC6C7DCA0659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4909B505-EFF9-4CB8-92EF-DC6C7DCA0659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4909B505-EFF9-4CB8-92EF-DC6C7DCA0659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4909B505-EFF9-4CB8-92EF-DC6C7DCA0659}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
