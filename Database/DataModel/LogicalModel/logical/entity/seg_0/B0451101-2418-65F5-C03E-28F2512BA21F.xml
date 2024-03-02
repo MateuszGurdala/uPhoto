@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B0451101-2418-65F5-C03E-28F2512BA21F" name="AccountType">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:57:02 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>AccountType</preferredAbbreviation>
+<shortName>AccountType</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AccountTypeId" id="999FEB10-9BF8-1C77-9A84-78B9DD7B5156">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:57:17 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Type" id="2403F8DA-0740-C982-F151-EC09CA0212D3">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:57:23 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A939DF39-5BB8-EB10-A28D-9A06CBF29F63" name="AccountType PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:57:22 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>999FEB10-9BF8-1C77-9A84-78B9DD7B5156</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="8E9390C7-BD86-B8CA-34A9-6DD674D42364" name="Key_2">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:27:38 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<newElementsIDs>2403F8DA-0740-C982-F151-EC09CA0212D3</newElementsIDs>
+<usedAttributes>
+<attributeRef>2403F8DA-0740-C982-F151-EC09CA0212D3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

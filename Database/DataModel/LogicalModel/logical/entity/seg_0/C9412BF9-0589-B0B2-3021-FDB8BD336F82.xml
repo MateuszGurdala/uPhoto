@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C9412BF9-0589-B0B2-3021-FDB8BD336F82" name="Tag">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:02:51 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="TagId" id="4106625A-2204-EB95-8195-97CC395ADEA3">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:11:18 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Value" id="C4572B72-A3F7-4FBF-CAF2-9E6017F7DFD1">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:11:30 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A37DE6E0-6EFC-C1B2-BA6A-9C2B65D63600" name="Tag PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:02:58 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4106625A-2204-EB95-8195-97CC395ADEA3</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="BF1D640D-FEC0-2AB2-0173-B5C22F167786" name="Key_2">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:28:39 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<newElementsIDs>C4572B72-A3F7-4FBF-CAF2-9E6017F7DFD1</newElementsIDs>
+<usedAttributes>
+<attributeRef>C4572B72-A3F7-4FBF-CAF2-9E6017F7DFD1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

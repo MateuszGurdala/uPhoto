@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="38CFDEFF-1AA1-0A85-A735-3801E1C6D8B7" name="UserAccount">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:28:53 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>User</preferredAbbreviation>
+<shortName>User</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="UserAccountId" id="937E5E32-9691-E47D-7177-5D01B0750BB7">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:29:05 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="64C3DB69-DF29-6311-AA95-B81F1B435568">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:31:40 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RegisteredOn" id="EC63CD1A-82A3-1653-C1DC-0F777A22A4A5">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:30:37 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LastSeenOn" id="4248E4CA-C39A-D319-F6A3-256FBC1B189A">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:31:02 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="9B00C896-BABB-1BEA-8CAA-AD0991AE7AA7">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:29:50 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Surname" id="56C41CA6-F4E7-890E-00E5-D8ABFAFFDBAB">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:30:31 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AccountTypeId" id="43F40EE7-8C79-82A1-84BC-142DB25F351A">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:57:47 UTC</createdTime>
+<generatorID>4EB051F8-CF41-B9E1-D8F9-DD74A1D930CE</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>999FEB10-9BF8-1C77-9A84-78B9DD7B5156</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4833EC6F-2DBE-F267-C79A-3FC077EACDBD" name="UserAccount PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:29:29 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>937E5E32-9691-E47D-7177-5D01B0750BB7</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="169AF373-0DBF-1AE8-18BD-6B1ECCE4B944" name="Key_2">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:27:23 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<newElementsIDs>64C3DB69-DF29-6311-AA95-B81F1B435568</newElementsIDs>
+<usedAttributes>
+<attributeRef>64C3DB69-DF29-6311-AA95-B81F1B435568</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

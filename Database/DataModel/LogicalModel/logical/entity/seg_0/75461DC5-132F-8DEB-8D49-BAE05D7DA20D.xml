@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="75461DC5-132F-8DEB-8D49-BAE05D7DA20D" name="PhotoTag">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:16 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>7031317C-C20D-DAFB-D04D-75FD91BE145B</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="TagId" id="6DF85A47-F644-F241-7B7D-2BAD20EE171D">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:34 UTC</createdTime>
+<generatorID>EC20E737-D378-3132-40E5-6F297CF303E3</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>4106625A-2204-EB95-8195-97CC395ADEA3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PhotoId" id="5CE1D09E-26FC-7B3E-E302-5FFD07C273D0">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:40 UTC</createdTime>
+<generatorID>0C1654A0-9E41-2DAF-4507-02978F68ED5C</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>24E4E44B-1BD6-D62E-A642-08B10F03BB93</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C838DFE7-C2C1-988D-8919-C4B24A55D06A" name="PhotoTag PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:34 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6DF85A47-F644-F241-7B7D-2BAD20EE171D</attributeRef>
+<attributeRef>5CE1D09E-26FC-7B3E-E302-5FFD07C273D0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

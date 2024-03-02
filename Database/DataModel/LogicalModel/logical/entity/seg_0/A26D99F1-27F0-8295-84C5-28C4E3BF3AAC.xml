@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A26D99F1-27F0-8295-84C5-28C4E3BF3AAC" name="Privilege">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:34:45 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Privilege</preferredAbbreviation>
+<shortName>Privilege</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PrivilegeId" id="125D622C-9AE7-45F5-6321-32AD64AA9533">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:35:02 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Type" id="6CEAAFB7-4B1E-65A0-91F8-4F1D0B5F76C7">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:35:08 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E921A799-F9E0-8C0C-96F4-F13E880AE8B5" name="Privilege PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 18:41:47 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>125D622C-9AE7-45F5-6321-32AD64AA9533</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7B979342-3D3C-3F02-EE8A-7C82BA651E1F" name="Key_2">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 19:26:59 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<newElementsIDs>6CEAAFB7-4B1E-65A0-91F8-4F1D0B5F76C7</newElementsIDs>
+<usedAttributes>
+<attributeRef>6CEAAFB7-4B1E-65A0-91F8-4F1D0B5F76C7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

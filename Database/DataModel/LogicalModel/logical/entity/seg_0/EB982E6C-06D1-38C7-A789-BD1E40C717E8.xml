@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EB982E6C-06D1-38C7-A789-BD1E40C717E8" name="AlbumAccessPrivilege">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:44:28 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PrivilegeId" id="DB89A5E7-BFA7-7613-25B7-F8E1B2F1BE5D">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:45:37 UTC</createdTime>
+<generatorID>29783445-EEC5-BF70-37E8-36971D752994</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>125D622C-9AE7-45F5-6321-32AD64AA9533</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="UserAccountId" id="4DE3EF16-938B-7F9F-B667-743DF5E53059">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:02 UTC</createdTime>
+<generatorID>8D7247A4-BA14-7C11-8E9C-5570A6B8594D</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>FE7FA1E9-A5C2-91A3-489D-D26D578E85AF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AlbumId" id="440E56BF-4B8A-FD72-C1E3-AF664E39C346">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:46:02 UTC</createdTime>
+<generatorID>8D7247A4-BA14-7C11-8E9C-5570A6B8594D</generatorID>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<referedAttribute>1F3A6A02-C653-EFB8-DE8F-75BECA565B60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D4695D89-D06D-9398-D423-2FEC34F61C50" name="AlbumAccessPrivilege PK">
+<createdBy>Mateusz</createdBy>
+<createdTime>2024-02-28 21:45:56 UTC</createdTime>
+<ownerDesignName>LogicalModel</ownerDesignName>
+<engineerTo>
+<item key="C619F777-93DD-F59B-D9A1-BDFF5259BB88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DB89A5E7-BFA7-7613-25B7-F8E1B2F1BE5D</attributeRef>
+<attributeRef>4DE3EF16-938B-7F9F-B667-743DF5E53059</attributeRef>
+<attributeRef>440E56BF-4B8A-FD72-C1E3-AF664E39C346</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
