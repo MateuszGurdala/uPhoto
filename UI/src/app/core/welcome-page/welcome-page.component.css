@@ -1,0 +1,72 @@
+.section-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 1.6vw;
+  /*margin: 0 auto;*/
+}
+
+.section-link {
+  font-size: 3vh;
+  font-weight: 500;
+}
+
+.buttons-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+}
+
+.signIn-button,
+.signUp-button {
+  font-size: 2.6vh;
+  font-weight: 500;
+  padding: 0.3vh 0.8vw 0.4vh 0.8vw;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.signIn-button {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.signUp-button {
+  padding: 0.4vh 0.9vw 0.6vh 0.9vw;
+}
+
+
+.about-section {
+  width: 100vw;
+  height: 93vh;
+  margin-top: 7vh;
+  padding: 4% 12%;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.about-info {
+  padding: 4%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.about-header {
+  font-weight: 700;
+  font-size: 8vh;
+  letter-spacing: -2px;
+  line-height: 9vh;
+}
+
+.about-p {
+  font-size: 3vh;
+  letter-spacing: -1px;
+  font-weight: 400;
+  color: var(--text-gray);
+  line-height: 3.6vh;
+}
