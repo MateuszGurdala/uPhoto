@@ -1,7 +1,7 @@
 import {Directive, ElementRef} from '@angular/core';
 
 @Directive({
-  selector: '[appTextColorReact]',
+  selector: '[uTextColorReact]',
   standalone: true
 })
 export class TextColorReactDirective {

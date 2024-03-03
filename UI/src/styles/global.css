@@ -1,28 +1,28 @@
 html {
-    font-family: "Inter", sans-serif;
-    font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
 }
 
 * {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background-image: var(--main-gradient);
+  background-image: var(--main-gradient);
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 
 a {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
