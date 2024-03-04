@@ -1,0 +1,83 @@
+:host {
+    left: 0;
+    transition: left var(--transition-time);
+    position: relative;
+
+    h1 {
+        font-size: 4em;
+        font-weight: 600;
+    }
+}
+
+.sign-in {
+    background-image: var(--main-gradient);
+    border-radius: 3em;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    height: 100%;
+    width: var(--page-width);
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 60% 5% 35%;
+    height: 94%;
+    margin: auto;
+    width: 90%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+
+    h1 {
+        margin-bottom: 0.6em;
+    }
+
+    u-input {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    button {
+        border-radius: 0.2em;
+        font-size: 3em;
+        font-weight: 600;
+        margin: auto 0 auto auto;
+        padding: 0.2em 0.6em;
+        width: fit-content;
+    }
+}
+
+.split {
+    margin: auto 0;
+    background-image: var(--accent-gradient);
+    height: 0.2em;
+}
+
+.other-accounts {
+    display: flex;
+    flex-direction: column;
+}
+
+.accounts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4em;
+    width: fit-content;
+    margin: auto;
+
+    a {
+        --size: 10em;
+        height: var(--size);
+        position: relative;
+        width: var(--size);
+        cursor: pointer;
+
+        image {
+            object-fit: contain;
+        }
+    }
+}

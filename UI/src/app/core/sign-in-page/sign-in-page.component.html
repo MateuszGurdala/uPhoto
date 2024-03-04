@@ -1,0 +1,8 @@
+<u-header/>
+<section>
+    <u-sign-in-toggle (pageSelect)="onPageSelect($event)"></u-sign-in-toggle>
+    <div class="pages">
+        <u-sign-in-panel [ngClass]="{'hide-left': currentPage === pages.SignUp}"/>
+        <u-sign-up-panel [ngClass]="{'hide-right': currentPage === pages.SignIn}"/>
+    </div>
+</section>

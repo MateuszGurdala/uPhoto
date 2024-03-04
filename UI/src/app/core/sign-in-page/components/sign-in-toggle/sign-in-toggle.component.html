@@ -1,0 +1,8 @@
+<div class="toggle">
+    <div (click)="switchPage(pages.SignIn)" [ngClass]="{'unselected': currentPage === pages.SignUp}">
+        Sign In
+    </div>
+    <div (click)="switchPage(pages.SignUp)" [ngClass]="{'unselected': currentPage === pages.SignIn}">
+        Sign Up
+    </div>
+</div>

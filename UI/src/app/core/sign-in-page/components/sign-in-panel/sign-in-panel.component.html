@@ -1,0 +1,25 @@
+<div class="sign-in">
+    <div class="content">
+        <form [formGroup]="formGroup">
+            <h1 class="text-gradient">With uPhoto account:</h1>
+            <u-input [size]="2.4" formControlName="email" label="E-mail"></u-input>
+            <u-input [size]="2.4" formControlName="password" label="Password" type="password"></u-input>
+            <button [disabled]="!formGroup.valid" uBackgroundColorReact>Continue</button>
+        </form>
+        <div class="split"></div>
+        <div class="other-accounts">
+            <h1 class="text-gradient">With external account:</h1>
+            <div class="accounts">
+                <a class="img-container" href="https://about.meta.com/">
+                    <img alt="meta" fill ngSrc="assets/icons/icons8-meta.svg">
+                </a>
+                <a class="img-container" href="https://www.instagram.com/">
+                    <img alt="instagram" fill ngSrc="assets/icons/icons8-instagram.svg">
+                </a>
+                <a class="img-container" href="https://www.google.com/photos/about/">
+                    <img alt="google-photos" fill ngSrc="assets/icons/icons8-google-photos.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

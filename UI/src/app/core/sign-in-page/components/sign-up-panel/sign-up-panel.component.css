@@ -1,0 +1,13 @@
+:host {
+    left: -50%;
+    transition: left var(--transition-time);
+    position: relative;
+}
+
+.sign-up {
+    width: var(--page-width);
+    height: 100%;
+    border-radius: 3em;
+    background-image: var(--main-gradient);
+    box-shadow: var(--box-shadow);
+}
