@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import {NgTemplateOutlet} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import { NgTemplateOutlet } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    NgTemplateOutlet,
-    RouterLink
-  ],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+	selector: 'u-header',
+	standalone: true,
+	imports: [
+		NgTemplateOutlet,
+		RouterLink
+	],
+	templateUrl: './header.component.html',
+	styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

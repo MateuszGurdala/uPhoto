@@ -1,28 +1,27 @@
-<app-header>
-  <ul class="section-nav">
-    <li uTextColorReact>About App</li>
-    <li uTextColorReact>Overview</li>
-    <li uTextColorReact>Assets</li>
-  </ul>
-  <div routerLink="/sign-in" uBackgroundColorReact class="sign-in-button">
-    <a>
-      Sign In
-    </a>
-  </div>
-</app-header>
+<u-header>
+    <ul class="section-nav">
+        <li uTextColorReact>About App</li>
+        <li uTextColorReact>Overview</li>
+        <li uTextColorReact>Assets</li>
+    </ul>
+    <div class="sign-in-button" routerLink="/sign-in" uBackgroundColorReact>
+        <a>
+            Sign In
+        </a>
+    </div>
+</u-header>
 <section class="about-section">
-  <div class="about-info">
-    <h1 class="text-gradient">
-      Managing photos has never been easier!
-    </h1>
-    <p>
-      Thanks to uPhoto you don't have to worry about having large amounts
-      of photos. With simple design and many options to group,
-      sort and search files you don't have to worry any of your memories
-      will be missed!
-    </p>
-  </div>
-  <div class="hero">
-    <img alt="hero" ngSrc="assets/images/hero.png" fill/>
-  </div>
+    <div class="about-info">
+        <h1 class="text-gradient">
+            Managing photos has never been easier!
+        </h1>
+        <p>
+            Experience seamless photo organization with uPhoto.
+            Effortlessly manage your entire library with intuitive features and powerful search capabilities.
+            Revolutionize your photo management today!
+        </p>
+    </div>
+    <div class="hero">
+        <img alt="hero" fill ngSrc="assets/images/hero.png"/>
+    </div>
 </section>

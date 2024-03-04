@@ -1,69 +1,69 @@
 .section-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  width: fit-content;
-  gap: 1.6vw;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    gap: 1.6vw;
+    margin: 0 auto;
 
-  li {
-    font-size: 3em;
-    font-weight: 500;
-  }
+    li {
+        font-size: 3em;
+        font-weight: 500;
+    }
 }
 
 .sign-in-button {
-  padding: 0.6em 1.6em;
-  border-radius: 1.2em;
+    padding: 0.4em 1.6em;
+    border-radius: 0.6em;
 
-  a {
-    font-size: 3em;
-    font-weight: 600;
-  }
+    a {
+        font-size: 3em;
+        font-weight: 600;
+    }
 }
 
 .about-section {
-  height: 93vh;
-  margin: 7vh 5% 0 5%;
+    height: 93vh;
+    margin: 7vh 5% 0 5%;
 
-  display: grid;
-  grid-template-columns: 50% 50%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .about-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
 
-  width: 90%;
-  height: 60%;
-  margin: 20% 5%;
+    width: 90%;
+    height: 60%;
+    margin: 20% 5%;
 
-  h1 {
-    font-weight: 700;
-    font-size: 8em;
-    letter-spacing: -2px;
-    line-height: 9vh;
-  }
+    h1 {
+        font-weight: 700;
+        font-size: 8em;
+        letter-spacing: -2px;
+        line-height: 9vh;
+    }
 
-  p {
-    font-size: 3em;
-    letter-spacing: -1px;
-    font-weight: 400;
-    color: var(--text-gray);
-    line-height: 3.6vh;
-  }
+    p {
+        font-size: 3em;
+        letter-spacing: -1px;
+        font-weight: 400;
+        color: var(--text-gray);
+        line-height: 3.6vh;
+    }
 }
 
 .hero {
-  width: 100%;
-  height: 90%;
-  margin: 5% 0;
-  position: relative;
+    width: 100%;
+    height: 90%;
+    margin: 5% 0;
+    position: relative;
 
-  img {
-    object-fit: contain;
-  }
+    img {
+        object-fit: contain;
+    }
 }

@@ -1,21 +1,24 @@
 .header {
-  height: 7vh;
-  min-height: 7em;
-  z-index: 10;
-  top: 0;
-  width: 80vw;
-  padding: 0 10%;
-  position: fixed;
-  box-shadow: var(--box-shadow);
-  background: var(--main-gradient);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    --box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+    align-items: center;
+    background: var(--main-gradient);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    min-height: 7em;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    width: 80vw;
+    z-index: 10;
 }
 
 .uPhoto-logo {
-  font-weight: 700;
-  font-size: 5em;
-  letter-spacing: -0.02em;
-  margin: 0;
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
 }
