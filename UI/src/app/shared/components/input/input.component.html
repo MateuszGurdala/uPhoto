@@ -1,0 +1,18 @@
+<div>
+    <p [style]="getLabelDynamicStyles" class="label">{{ label }}</p>
+    <div>
+        <input (keyup)="onKeyUp()"
+               [formControl]="inputFormControl"
+               [style]="getInputDynamicStyles"
+               [type]="type"
+        />
+        <span (click)="writeValue(null)"
+              [ngClass]="{'hidden': !isTouched}"
+              [style]="getClearButtonDynamicStyles"
+              textBaseColor="--text-gray"
+              uIcon
+              uTextColorReact>
+            close
+        </span>
+    </div>
+</div>
