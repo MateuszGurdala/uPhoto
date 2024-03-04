@@ -70,7 +70,7 @@ form {
     margin: auto;
 
     a {
-        --size: 10em;
+        --size: 12em;
         height: var(--size);
         position: relative;
         width: var(--size);
