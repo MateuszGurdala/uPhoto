@@ -1,0 +1,21 @@
+:host {
+    --modal-width: 70em;
+    --modal-height: 30em;
+    --border-radius: 1em;
+}
+
+div {
+    background-image: var(--main-gradient);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 0.2em 0.4em 0, rgba(14, 30, 37, 0.32) 0 0.2em 1.6em 0;
+    height: var(--modal-height);
+    left: calc((100% - var(--modal-width)) / 2);
+    position: absolute;
+    top: 100%;
+    transition: top 0.6s;
+    width: var(--modal-width);
+}
+
+.visible {
+    top: calc(100% - var(--modal-height));
+}

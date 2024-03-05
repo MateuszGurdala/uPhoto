@@ -6,6 +6,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { NgClass } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TextColorReactDirective } from '../../directives/text-color-react.directive';
+import { AppsModalComponent } from '../apps-modal/apps-modal.component';
 
 @Component({
 	selector: 'u-app-root',
@@ -18,7 +19,8 @@ import { TextColorReactDirective } from '../../directives/text-color-react.direc
 		IconDirective,
 		NavbarComponent,
 		NgClass,
-		RouterOutlet
+		RouterOutlet,
+		AppsModalComponent
 	],
 	templateUrl: './app-root.component.html',
 	styleUrl: './app-root.component.css'

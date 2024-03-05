@@ -3,7 +3,8 @@
         <span routerLink="/sign-in" uIcon uTextColorReact>logout</span>
     </div>
 </u-header>
-<section>
+<section #appSection>
     <router-outlet/>
 </section>
-<u-navbar/>
+<u-navbar #navbar/>
+<u-apps-modal [sectionElementRef]="appSection" [showAllAppsEmitter]="navbar.showAllApps"/>
