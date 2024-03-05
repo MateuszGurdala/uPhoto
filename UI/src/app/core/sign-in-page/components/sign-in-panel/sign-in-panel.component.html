@@ -4,7 +4,11 @@
             <h1 class="text-gradient">With uPhoto account:</h1>
             <u-input [size]="2.4" formControlName="email" label="E-mail"></u-input>
             <u-input [size]="2.4" formControlName="password" label="Password" type="password"></u-input>
-            <button [disabled]="!formGroup.valid" uBackgroundColorReact>Continue</button>
+            <button [disabled]="!formGroup.valid"
+                    routerLink="/app"
+                    uBackgroundColorReact
+            >Continue
+            </button>
         </form>
         <div class="split"></div>
         <div class="other-accounts">
