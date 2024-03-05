@@ -1,0 +1,33 @@
+:host {
+    height: var(--navbar-height);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.navbar {
+    margin: auto;
+    align-items: center;
+    background-image: var(--main-gradient);
+    border-radius: 2em;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    height: 4em;
+    padding: 1.6em 1em;
+    width: fit-content;
+    z-index: 10;
+
+    span {
+        font-size: 6em;
+    }
+
+    .split {
+        width: 0.4em;
+        height: 100%;
+        margin: 0 1em;
+        background-image: var(--accent-gradient);
+    }
+}
