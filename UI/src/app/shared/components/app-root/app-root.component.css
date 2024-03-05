@@ -20,7 +20,6 @@ section {
     display: grid;
     height: calc(100vh - var(--header-height) - var(--navbar-height) - var(--top-extra-margin));
     margin: calc(var(--header-height) + var(--top-extra-margin)) 5% var(--navbar-height) 5%;
-    overflow: hidden;
 
     /*TODO: REMOVE*/
     border-color: var(--text-gray);
