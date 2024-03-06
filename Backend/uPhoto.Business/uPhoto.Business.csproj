@@ -8,6 +8,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\uPhoto.Common\uPhoto.Common.csproj" />
+      <ProjectReference Include="..\uPhoto.Database\uPhoto.Database.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+      <PackageReference Include="MediatR" Version="12.2.0" />
     </ItemGroup>
 
 </Project>
