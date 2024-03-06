@@ -3,7 +3,7 @@ using uPhoto.Common.Models.Entities;
 
 namespace uPhoto.Database.Contracts;
 
-public interface IAlbumDbContext
+public interface IAlbumDbContext: IDbContextBase
 {
 	public DbSet<Album> Album { get; set; }
 	public DbSet<Privilege> Privilege { get; set; }

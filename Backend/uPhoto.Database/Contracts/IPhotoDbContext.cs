@@ -3,7 +3,7 @@ using uPhoto.Common.Models.Entities;
 
 namespace uPhoto.Database.Contracts;
 
-public interface IPhotoDbContext
+public interface IPhotoDbContext: IDbContextBase
 {
 	public DbSet<Photo> Photo { get; set; }
 	public DbSet<Tag> Tag { get; set; }
