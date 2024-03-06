@@ -11,9 +11,10 @@ public class UserAccount : IEntity<Guid>
 
     public byte AccountTypeId { get; set; }
 
-    [MaxLength(255)] public string Email { get; set; }
-    public DateTime RegisteredOn { get; set; }
-    public DateTime LastSeenOn { get; set; }
+    [MaxLength(255)] public string Email { get; init; }
+    [MaxLength(64)] public string Password { get; init; }
+    public DateTime RegisteredOn { get; init; }
+    public DateTime LastSeenOn { get; init; }
 
     public string? Name { get; set; }
     public string? Surname { get; set; }

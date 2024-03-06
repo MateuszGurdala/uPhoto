@@ -3,6 +3,7 @@ CREATE TABLE UserAccount
     Id            UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
     AccountTypeId TINYINT       NOT NULL,
     Email         VARCHAR(255)  NOT NULL UNIQUE,
+    Password      VARCHAR(64)   NOT NULL,
     RegisteredOn  DATETIME2     NOT NULL       DEFAULT GETDATE(),
     LastSeenOn    DATETIME2     NOT NULL       DEFAULT GETDATE(),
     Name          NVARCHAR(MAX) NULL,
