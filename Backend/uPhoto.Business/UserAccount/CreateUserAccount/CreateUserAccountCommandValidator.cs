@@ -12,13 +12,16 @@ public class CreateUserAccountCommandValidator : AbstractValidator<CreateUserAcc
 			.EmailAddress();
 
 		RuleFor(cmd => cmd.Email)
-			.Must(email => context.UserAccount.Any(ua => ua.Email.ToLower() != email.ToLower()))
+			.Must(email => context.UserAccount.All(ua => ua.Email.ToLower() != email.ToLower()))
 			.WithMessage("Account with given email address already exists.");
 
 		RuleFor(cmd => cmd.Password)
 			.Must(password => password.Any(char.IsUpper))
+			.WithMessage("Password must contain capital letter.");
+
+		RuleFor(cmd => cmd.Password)
 			.Must(password => password.Any(char.IsNumber))
-			.WithMessage("Password must contain one capital letter and a number.");
+			.WithMessage("Password must contain number.");
 
 		RuleFor(cmd => cmd.Password)
 			.NotNull()
