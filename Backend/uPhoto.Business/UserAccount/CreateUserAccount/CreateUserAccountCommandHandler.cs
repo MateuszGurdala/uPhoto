@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using uPhoto.Common.Constants;
 using uPhoto.Common.Contracts;
 using uPhoto.Common.Models;
@@ -30,6 +29,6 @@ public class CreateUserAccountCommandHandler(IUserAccountDbContext context)
 		await context.UserAccount.AddAsync(userAccount, cancellationToken);
 		await context.SaveChangesAsync(cancellationToken);
 
-		return ApiResponse<CreateUserAccountCommandResponse>.Success(new CreateUserAccountCommandResponse());
+		return ApiResponse<CreateUserAccountCommandResponse>.Success();
 	}
 }

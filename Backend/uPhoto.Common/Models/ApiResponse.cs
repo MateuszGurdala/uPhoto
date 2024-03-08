@@ -10,6 +10,7 @@ public class ApiResponse<TValue>
 
 
 	public static ApiResponse<TValue> Success(TValue data) => new() { Data = data, Status = HttpStatusCode.OK };
+	public static ApiResponse<TValue> Success() => new() { Status = HttpStatusCode.OK };
 
 	public static ApiResponse<TValue> Failed(string errors, HttpStatusCode status = HttpStatusCode.InternalServerError) => new() { Errors = errors, Status = status };
 }
