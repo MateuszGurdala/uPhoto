@@ -4,16 +4,13 @@ using uPhoto.Common.Contracts;
 using uPhoto.Common.Models;
 using uPhoto.Common;
 using uPhoto.Database.Contracts;
+
 // ReSharper disable ClassNeverInstantiated.Global
 
 namespace uPhoto.Business.UserAccount.CreateUserAccount;
 
-public record CreateUserAccountCommand(string Email, string Password) : IResultRequest<CreateUserAccountCommandResponse>;
-
-public record CreateUserAccountCommandResponse;
-
 public class CreateUserAccountCommandHandler(IUserAccountDbContext context)
-	: IResultRequestHandler<CreateUserAccountCommand, CreateUserAccountCommandResponse>
+	: IApiResponseRequestHandler<CreateUserAccountCommand, CreateUserAccountCommandResponse>
 {
 	public async Task<ApiResponse<CreateUserAccountCommandResponse>> Handle(CreateUserAccountCommand request, CancellationToken cancellationToken)
 	{
