@@ -10,23 +10,22 @@ namespace uPhoto.API.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-	private const string connectionStringSection = "ConnectionStrings:uPhotoMD";
+	private const string _connectionStringSection = "ConnectionStrings:uPhotoMD";
 
 	public static void ConfigureServices(this WebApplicationBuilder builder)
 	{
 		builder.Services
-			.AddMediatR(config =>
-			{
-				config.RegisterServicesFromAssemblyContaining<CreateUserAccountCommandHandler>();
-			})
+			.AddSession()
+			.AddAuth()
+			.AddMediator()
 			.AddDbContextOptions(builder.Configuration)
 			.AddCommandValidators()
-			.InjectServices();
+			.AddServices();
 	}
 
 	private static IServiceCollection AddDbContextOptions(this IServiceCollection serviceCollection, IConfiguration configurationManager)
 	{
-		if (configurationManager.GetValue<string?>(connectionStringSection) is { } connectionString)
+		if (configurationManager.GetValue<string?>(_connectionStringSection) is { } connectionString)
 		{
 			serviceCollection.AddDbContext<DbContextBase>(options => { options.UseSqlServer(connectionString); });
 		}
@@ -38,23 +37,43 @@ public static class ServiceCollectionExtensions
 		return serviceCollection;
 	}
 
-	private static IServiceCollection InjectServices(this IServiceCollection serviceCollection)
+	private static IServiceCollection AddServices(this IServiceCollection serviceCollection)
 	{
-		serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+		serviceCollection
+			.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-		serviceCollection.AddScoped<IUserAccountDbContext, UserAccountDbContext>();
-		serviceCollection.AddScoped<IAlbumDbContext, AlbumDbContext>();
-		serviceCollection.AddScoped<IGeographicalLocationDbContext, GeographicalLocationDbContext>();
-		serviceCollection.AddScoped<IPhotoDbContext, PhotoDbContext>();
+		serviceCollection
+			.AddScoped<IUserAccountDbContext, UserAccountDbContext>()
+			.AddScoped<IAlbumDbContext, AlbumDbContext>()
+			.AddScoped<IGeographicalLocationDbContext, GeographicalLocationDbContext>()
+			.AddScoped<IPhotoDbContext, PhotoDbContext>();
 
 		return serviceCollection;
 	}
 
 	private static IServiceCollection AddCommandValidators(this IServiceCollection serviceCollection)
 	{
-		serviceCollection.AddFluentValidationAutoValidation();
-		serviceCollection.AddValidatorsFromAssemblyContaining<CreateUserAccountCommandValidator>();
+		return serviceCollection
+			.AddFluentValidationAutoValidation()
+			.AddValidatorsFromAssemblyContaining<CreateUserAccountCommandValidator>();
+	}
 
-		return serviceCollection;
+	private static IServiceCollection AddMediator(this IServiceCollection serviceCollection)
+	{
+		return serviceCollection.AddMediatR(config => { config.RegisterServicesFromAssemblyContaining<CreateUserAccountCommandHandler>(); });
+	}
+
+	private static IServiceCollection AddSession(this IServiceCollection serviceCollection)
+	{
+		return serviceCollection
+			.AddDistributedMemoryCache()
+			.AddSession(config =>
+			{
+				config.IdleTimeout = TimeSpan.FromSeconds(30); //Server Cache Timeout
+				config.Cookie.MaxAge = TimeSpan.FromMinutes(10);
+				config.Cookie.HttpOnly = true;
+				config.Cookie.IsEssential = true;
+				config.Cookie.Name = ".uPhoto.Session";
+			});
 	}
 }
