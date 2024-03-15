@@ -5,7 +5,7 @@ using uPhoto.Database.Contracts;
 
 namespace uPhoto.API.Controllers;
 
-public class PhotoController(IPhotoDbContext photoDbContext)
+public class PhotoController(IPhotoDbContext photoDbContext): ControllerBase
 {
 	[HttpGet("photos")]
 	public async Task<IEnumerable<Photo>> GetPhotos(CancellationToken cancellationToken)
