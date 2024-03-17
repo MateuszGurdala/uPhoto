@@ -2,5 +2,6 @@
 
 public static class SessionKeys
 {
-	public static string Email => "Email";
+	public static string Email => "email";
+	public static string UserId => "uid";
 }

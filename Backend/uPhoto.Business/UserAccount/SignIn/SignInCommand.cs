@@ -4,4 +4,4 @@ namespace uPhoto.Business.UserAccount.SignIn;
 
 public record SignInCommand(string Email, string Password) : IApiResponseRequest<SignInCommandResponse>;
 
-public record SignInCommandResponse;
+public record SignInCommandResponse(DateTime Expires);

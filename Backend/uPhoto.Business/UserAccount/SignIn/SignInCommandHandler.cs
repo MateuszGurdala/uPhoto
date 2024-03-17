@@ -10,7 +10,8 @@ using uPhoto.Database.Contracts;
 
 namespace uPhoto.Business.UserAccount.SignIn;
 
-public class SignInCommandHandler(IUserAccountDbContext context, IHttpContextAccessor httpContextAccessor) : IApiResponseRequestHandler<SignInCommand, SignInCommandResponse>
+public class SignInCommandHandler(IUserAccountDbContext context, IHttpContextAccessor httpContextAccessor)
+	: IApiResponseRequestHandler<SignInCommand, SignInCommandResponse>
 {
 	private static readonly AuthenticationProperties _authenticationProperties = new()
 	{
@@ -21,20 +22,21 @@ public class SignInCommandHandler(IUserAccountDbContext context, IHttpContextAcc
 
 	public async Task<ApiResponse<SignInCommandResponse>> Handle(SignInCommand request, CancellationToken cancellationToken)
 	{
-		string userAccountType = await context.UserAccount
+		var userAccountDetails = await context.UserAccount
 			.Include(ua => ua.AccountType)
 			.Where(ua => ua.Email == request.Email)
-			.Select(ua => ua.AccountType.Type)
+			.Select(ua => new { ua.AccountType.Type, ua.Id })
 			.FirstAsync(cancellationToken);
 
+		httpContextAccessor.HttpContext!.Session.SetString(SessionKeys.UserId, userAccountDetails.Id.ToString());
 		httpContextAccessor.HttpContext!.Session.SetString(SessionKeys.Email, request.Email);
 
 		await httpContextAccessor.HttpContext!.SignInAsync(
 			CookieAuthenticationDefaults.AuthenticationScheme,
-			CreateClaimsIdentity(request.Email, userAccountType),
+			CreateClaimsIdentity(request.Email, userAccountDetails.Type),
 			_authenticationProperties);
 
-		return ApiResponse<SignInCommandResponse>.Success();
+		return ApiResponse<SignInCommandResponse>.Success(new SignInCommandResponse(DateTime.UtcNow.AddMinutes(10)));
 	}
 
 	private static ClaimsPrincipal CreateClaimsIdentity(string email, string accountType)
