@@ -25,30 +25,28 @@ export class HttpClientBase {
 		);
 	}
 
-	private get getCommonPipe(): UnaryFunction<Observable<ApiResponseModel<any>>,
-		Observable<ObservedValueOf<Observable<ApiResponseModel<any>>>>> {
+	private get getCommonPipe(): UnaryFunction<Observable<ApiResponseModel<any>>, Observable<any | {}>> {
 		return pipe(
-			map((apiResponse: ApiResponseModel<any>) => apiResponse.value),
+			map((apiResponse: ApiResponseModel<any>) => apiResponse.data ?? {}),
 			take(1)
 		);
 	}
 
-	protected get<T>(endpoint: string, apiOptions?: ApiRequestOptionsModel): Observable<ApiResponseModel<T>> {
+	protected get<T = {}>(endpoint: string, apiOptions?: ApiRequestOptionsModel): Observable<T | {}> {
 		return this.client.get<ApiResponseModel<T>>(appClientConfig.apiUrl + endpoint, {
 			headers: this.headers,
 			withCredentials: apiOptions?.isAnonymous ?? true
 		}).pipe(this.getErrorHandlingPipe, this.getCommonPipe);
 	}
 
-	protected post<T>(endpoint: string, payload: any, apiOptions?: ApiRequestOptionsModel): Observable<ApiResponseModel<T>> {
-		console.log(this);
+	protected post<T = {}>(endpoint: string, payload: any, apiOptions?: ApiRequestOptionsModel): Observable<T | {}> {
 		return this.client.post<ApiResponseModel<T>>(appClientConfig.apiUrl + endpoint, payload, {
 			headers: this.headers,
 			withCredentials: apiOptions?.isAnonymous ?? true
 		}).pipe(this.getErrorHandlingPipe, this.getCommonPipe);
 	}
 
-	protected put<T>(endpoint: string, payload: any, apiOptions?: ApiRequestOptionsModel): Observable<ApiResponseModel<T>> {
+	protected put<T = {}>(endpoint: string, payload: any, apiOptions?: ApiRequestOptionsModel): Observable<T | {}> {
 		return this.client.post<ApiResponseModel<T>>(appClientConfig.apiUrl + endpoint, payload, {
 			headers: this.headers,
 			withCredentials: apiOptions?.isAnonymous ?? true
