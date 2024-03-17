@@ -1,9 +1,11 @@
+import { AuthService } from './auth.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientBase } from './http-client-base';
 import { Injectable } from '@angular/core';
 import { KeyValuePairModel } from '../models/utilities/key-value-pair.model';
 import { Router } from '@angular/router';
 import { SignInCommand } from '../../core/sign-in-page/models/sign-in.command';
+import { SignInResponse } from '../../core/sign-in-page/models/sign-in.response';
 import { tap } from 'rxjs';
 
 @Injectable({
@@ -19,15 +21,19 @@ export class AccountService extends HttpClientBase {
 
 	constructor(
 		httpClient: HttpClient,
-		private router: Router
+		private authService: AuthService,
+		private router: Router,
 	) {
 		super(httpClient);
 	}
 
 	public signIn(command: SignInCommand): void {
-		this.post(this.endpoints['signIn'], command, {isAnonymous: true})
+		this.post<SignInResponse>(this.endpoints['signIn'], command, {isAnonymous: true})
 			.pipe(
-				tap(() => this.router.navigate(['/app', 'home']))
+				tap((response: SignInResponse): void => {
+					this.authService.expirationDate = response.expires;
+					void this.router.navigate(['/app', 'home']);
+				})
 			)
 			.subscribe();
 	}
@@ -35,7 +41,10 @@ export class AccountService extends HttpClientBase {
 	public signOut(): void {
 		this.post(this.endpoints['signOut'], {})
 			.pipe(
-				tap(() => this.router.navigate(['/sign-in']))
+				tap((): void => {
+					this.authService.expirationDate = null;
+					void this.router.navigate(['/sign-in']);
+				})
 			)
 			.subscribe();
 	}

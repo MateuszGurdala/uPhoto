@@ -6,7 +6,8 @@ import { provideServerRendering } from '@angular/platform-server';
 import { routes } from './app.routes';
 
 export const appClientConfig = {
-	apiUrl: 'http://localhost:5159/api/'
+	apiUrl: 'http://localhost:5159/api/',
+	sessionLifespan: 10 //minutes
 };
 
 export const appConfig: ApplicationConfig = {
