@@ -72,7 +72,7 @@ public static class ServiceCollectionExtensions
 			{
 				config.IdleTimeout = TimeSpan.FromSeconds(30); //Server Cache Timeout
 				config.Cookie.MaxAge = TimeSpan.FromMinutes(10);
-				config.Cookie.HttpOnly = false;
+				config.Cookie.HttpOnly = true;
 				config.Cookie.IsEssential = true;
 				config.Cookie.Name = ".uPhoto.Session";
 			});
