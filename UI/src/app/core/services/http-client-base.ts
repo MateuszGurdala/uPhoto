@@ -1,5 +1,5 @@
-import { ApiRequestOptionsModel } from '../models/api/api-request-options.model';
-import { ApiResponseModel } from '../models/api/api-response.model';
+import { ApiRequestOptionsModel } from '../../shared/models/api/api-request-options.model';
+import { ApiResponseModel } from '../../shared/models/api/api-response.model';
 import { Directive } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { appClientConfig } from '../../app.config';

@@ -1,4 +1,4 @@
-import { AccountService } from '../../../../../shared/services/account.service';
+import { AccountService } from '../../../../services/account.service';
 import { BackgroundColorReactDirective } from '../../../../../shared/directives/background-color-react.directive';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';

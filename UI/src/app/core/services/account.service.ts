@@ -2,10 +2,10 @@ import { AuthService } from './auth.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientBase } from './http-client-base';
 import { Injectable } from '@angular/core';
-import { KeyValuePairModel } from '../models/utilities/key-value-pair.model';
+import { KeyValuePairModel } from '../../shared/models/utilities/key-value-pair.model';
 import { Router } from '@angular/router';
-import { SignInCommand } from '../../core/pages/sign-in-page/models/sign-in.command';
-import { SignInResponse } from '../../core/pages/sign-in-page/models/sign-in.response';
+import { SignInCommand } from '../pages/sign-in-page/models/sign-in.command';
+import { SignInResponse } from '../pages/sign-in-page/models/sign-in.response';
 import { tap } from 'rxjs';
 
 @Injectable({

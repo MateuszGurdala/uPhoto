@@ -1,6 +1,6 @@
 import { EnvironmentProviders } from '@angular/core';
 import { provideRouter, Routes } from '@angular/router';
-import { authGuard } from '../../shared/guards/auth.guard';
+import { authGuard } from '../guards/auth.guard';
 import { WelcomePageComponent } from '../pages/welcome-page/welcome-page.component';
 import { SignInPageComponent } from '../pages/sign-in-page/sign-in-page.component';
 import { AppRootComponent } from '../../shared/components/app-root/app-root.component';

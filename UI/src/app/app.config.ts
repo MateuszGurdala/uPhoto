@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { InterceptorsProvider } from './shared/interceptors/interceptors.provider.const';
+import { InterceptorsProvider } from './core/providers/interceptors.provider.const';
 import { LazyLoadingProvider } from './core/providers/lazy-loading.provider.const';
 import { RouterProvider } from './core/providers/router.provider.const';
 import { HttpProvider } from './core/providers/http.provider.const';

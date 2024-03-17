@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StorageKeys } from '../enums/storage-keys.enum';
+import { StorageKeys } from '../../shared/enums/storage-keys.enum';
 import moment, { Moment } from 'moment';
 
 @Injectable({
