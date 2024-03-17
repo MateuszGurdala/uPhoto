@@ -2,10 +2,10 @@
     <div class="content">
         <form [formGroup]="formGroup">
             <h1 class="text-gradient">With uPhoto account:</h1>
-            <u-input [size]="2.4" formControlName="email" label="E-mail"></u-input>
-            <u-input [size]="2.4" formControlName="password" label="Password" type="password"></u-input>
-            <button [disabled]="!formGroup.valid"
-                    routerLink="/app"
+            <u-input [size]="2.9" formControlName="email" label="E-mail"></u-input>
+            <u-input [size]="2.9" formControlName="password" label="Password" type="password"></u-input>
+            <button (click)="onSignIn()"
+                    [disabled]="!formGroup.valid"
                     uBackgroundColorReact
             >Continue
             </button>

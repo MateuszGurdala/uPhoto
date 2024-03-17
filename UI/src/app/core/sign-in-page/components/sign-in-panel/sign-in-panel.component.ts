@@ -1,3 +1,4 @@
+import { AccountService } from '../../../../shared/services/account.service';
 import { BackgroundColorReactDirective } from '../../../../shared/directives/background-color-react.directive';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -10,11 +11,11 @@ import { RouterLink } from '@angular/router';
 	selector: 'u-sign-in-panel',
 	standalone: true,
 	imports: [
-		InputComponent,
-		IconDirective,
-		ReactiveFormsModule,
 		BackgroundColorReactDirective,
+		IconDirective,
+		InputComponent,
 		NgOptimizedImage,
+		ReactiveFormsModule,
 		RouterLink
 	],
 	templateUrl: './sign-in-panel.component.html',
@@ -30,6 +31,18 @@ export class SignInPanelComponent {
 		}]
 	});
 
-	constructor(private formBuilder: FormBuilder) {
+	constructor(
+		private accountService: AccountService,
+		private formBuilder: FormBuilder,
+	) {
+	}
+
+	public onSignIn(): void {
+		if (this.formGroup.valid) {
+			this.accountService.signIn({
+				email: this.formGroup.get('email')?.getRawValue(),
+				password: this.formGroup.get('password')?.getRawValue()
+			});
+		}
 	}
 }

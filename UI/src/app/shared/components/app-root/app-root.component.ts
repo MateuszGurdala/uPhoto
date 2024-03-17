@@ -7,6 +7,7 @@ import { NgClass } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TextColorReactDirective } from '../../directives/text-color-react.directive';
 import { AppsModalComponent } from '../apps-modal/apps-modal.component';
+import { AccountService } from '../../services/account.service';
 
 @Component({
 	selector: 'u-app-root',
@@ -26,4 +27,11 @@ import { AppsModalComponent } from '../apps-modal/apps-modal.component';
 	styleUrl: './app-root.component.css'
 })
 export class AppRootComponent {
+	
+	constructor(private accountService: AccountService) {
+	}
+
+	public onSignOut(): void {
+		this.accountService.signOut();
+	}
 }
