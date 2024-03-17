@@ -4,8 +4,8 @@ import { HttpClientBase } from './http-client-base';
 import { Injectable } from '@angular/core';
 import { KeyValuePairModel } from '../models/utilities/key-value-pair.model';
 import { Router } from '@angular/router';
-import { SignInCommand } from '../../core/sign-in-page/models/sign-in.command';
-import { SignInResponse } from '../../core/sign-in-page/models/sign-in.response';
+import { SignInCommand } from '../../core/pages/sign-in-page/models/sign-in.command';
+import { SignInResponse } from '../../core/pages/sign-in-page/models/sign-in.response';
 import { tap } from 'rxjs';
 
 @Injectable({

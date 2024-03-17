@@ -1,9 +1,8 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideClientHydration } from '@angular/platform-browser';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { provideRouter } from '@angular/router';
-import { provideServerRendering } from '@angular/platform-server';
-import { routes } from './app.routes';
+import { InterceptorsProvider } from './shared/interceptors/interceptors.provider.const';
+import { LazyLoadingProvider } from './core/providers/lazy-loading.provider.const';
+import { RouterProvider } from './core/providers/router.provider.const';
+import { HttpProvider } from './core/providers/http.provider.const';
 
 export const appClientConfig = {
 	apiUrl: 'http://localhost:5159/api/',
@@ -12,9 +11,9 @@ export const appClientConfig = {
 
 export const appConfig: ApplicationConfig = {
 	providers: [
-		provideClientHydration(),
-		provideHttpClient(withFetch()),
-		provideRouter(routes),
-		provideServerRendering(),
+		HttpProvider,
+		InterceptorsProvider,
+		LazyLoadingProvider,
+		RouterProvider
 	]
 };
