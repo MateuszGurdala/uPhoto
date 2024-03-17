@@ -20,7 +20,8 @@ public static class ServiceCollectionExtensions
 			.AddMediator()
 			.AddDbContextOptions(builder.Configuration)
 			.AddCommandValidators()
-			.AddServices();
+			.AddServices()
+			.AddCors();
 	}
 
 	private static IServiceCollection AddDbContextOptions(this IServiceCollection serviceCollection, IConfiguration configurationManager)
@@ -71,9 +72,25 @@ public static class ServiceCollectionExtensions
 			{
 				config.IdleTimeout = TimeSpan.FromSeconds(30); //Server Cache Timeout
 				config.Cookie.MaxAge = TimeSpan.FromMinutes(10);
-				config.Cookie.HttpOnly = true;
+				config.Cookie.HttpOnly = false;
 				config.Cookie.IsEssential = true;
 				config.Cookie.Name = ".uPhoto.Session";
+			});
+	}
+
+	private static IServiceCollection AddCors(this IServiceCollection serviceCollection)
+	{
+		return serviceCollection
+			.AddCors(config =>
+			{
+				config.AddDefaultPolicy(
+					builder => builder
+						.WithOrigins("http://localhost:4200")
+						.AllowAnyMethod()
+						.AllowAnyHeader()
+						.AllowCredentials()
+						.Build()
+				);
 			});
 	}
 }
