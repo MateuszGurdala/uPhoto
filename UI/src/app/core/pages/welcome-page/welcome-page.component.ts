@@ -1,9 +1,9 @@
-import { BackgroundColorReactDirective } from '../../shared/directives/background-color-react.directive';
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/components/header/header.component';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { TextColorReactDirective } from '../../shared/directives/text-color-react.directive';
+import { HeaderComponent } from '../../../shared/components/header/header.component';
+import { TextColorReactDirective } from '../../../shared/directives/text-color-react.directive';
+import { BackgroundColorReactDirective } from '../../../shared/directives/background-color-react.directive';
 
 @Component({
 	selector: 'app-welcome-page',

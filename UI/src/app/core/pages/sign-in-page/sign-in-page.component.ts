@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/components/header/header.component';
 import { Location, NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SignInPage } from './enums/sign-in-page.enum';
 import { SignInToggleComponent } from './components/sign-in-toggle/sign-in-toggle.component';
 import { Title } from '@angular/platform-browser';
-import { InputComponent } from '../../shared/components/input/input.component';
 import { SignInPanelComponent } from './components/sign-in-panel/sign-in-panel.component';
 import { SignUpPanelComponent } from './components/sign-up-panel/sign-up-panel.component';
+import { HeaderComponent } from '../../../shared/components/header/header.component';
+import { InputComponent } from '../../../shared/components/input/input.component';
 
 @Component({
 	selector: 'app-sign-in-page',

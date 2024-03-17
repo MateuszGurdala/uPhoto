@@ -1,9 +1,9 @@
-import { AccountService } from '../../../../shared/services/account.service';
-import { BackgroundColorReactDirective } from '../../../../shared/directives/background-color-react.directive';
+import { AccountService } from '../../../../../shared/services/account.service';
+import { BackgroundColorReactDirective } from '../../../../../shared/directives/background-color-react.directive';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IconDirective } from '../../../../shared/directives/icon.directive';
-import { InputComponent } from '../../../../shared/components/input/input.component';
+import { IconDirective } from '../../../../../shared/directives/icon.directive';
+import { InputComponent } from '../../../../../shared/components/input/input.component';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -23,10 +23,10 @@ import { RouterLink } from '@angular/router';
 })
 export class SignInPanelComponent {
 	public formGroup: FormGroup = this.formBuilder.group({
-		email: ['', {
+		email: ['test@gmail.com', {
 			validators: [Validators.required, Validators.email]
 		}],
-		password: ['', {
+		password: ['testPassword123', {
 			validators: [Validators.required]
 		}]
 	});
