@@ -10,7 +10,8 @@ using uPhoto.Database.Contracts;
 
 namespace uPhoto.API.Controllers;
 
-public class UserAccountController(IUserAccountDbContext userAccountDbContext, IMediator mediator): ControllerBase
+[Route("api/user-account")]
+public class UserAccountController(IUserAccountDbContext userAccountDbContext, IMediator mediator) : ControllerBase
 {
 	[HttpPut("create-account")]
 	[AllowAnonymous]
