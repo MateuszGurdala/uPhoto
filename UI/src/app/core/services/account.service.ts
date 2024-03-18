@@ -12,7 +12,7 @@ import { tap } from 'rxjs';
 	providedIn: 'root'
 })
 export class AccountService extends HttpClientBase {
-	private readonly controllerPrefix: string = 'UserAccount/';
+	private readonly controllerPrefix: string = 'user-account/';
 	private readonly endpoints: KeyValuePairModel<string> = {
 		createAccount: this.controllerPrefix + 'create-account',
 		signIn: this.controllerPrefix + 'sign-in',
