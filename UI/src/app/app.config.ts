@@ -1,8 +1,8 @@
 import { ApplicationConfig } from '@angular/core';
+import { HttpProvider } from './core/providers/http.provider.const';
 import { InterceptorsProvider } from './core/providers/interceptors.provider.const';
 import { LazyLoadingProvider } from './core/providers/lazy-loading.provider.const';
 import { RouterProvider } from './core/providers/router.provider.const';
-import { HttpProvider } from './core/providers/http.provider.const';
 
 export const appClientConfig = {
 	apiUrl: 'http://localhost:5159/api/',
