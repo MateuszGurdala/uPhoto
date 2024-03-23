@@ -28,14 +28,14 @@
 
 form {
     display: grid;
-    grid-template-rows: 25% 20% 20% 35%;
+    grid-template-rows: 20% 25% 25% 30%;
 
     h1 {
         margin-bottom: 0.6em;
     }
 
     u-input {
-        margin: 0 auto;
+        margin: auto auto;
         width: 80%;
     }
 
