@@ -5,10 +5,12 @@
             <u-input [size]="2.9" formControlName="email" label="E-mail"></u-input>
             <u-input [size]="2.9" formControlName="password" label="Password" type="password"></u-input>
             <button (click)="onSignIn()"
+                    *ngIf="!isProcessingRequest"
                     [disabled]="!formGroup.valid"
                     uBackgroundColorReact
             >Continue
             </button>
+            <u-spinner *ngIf="isProcessingRequest"/>
         </form>
         <div class="split"></div>
         <div class="other-accounts">

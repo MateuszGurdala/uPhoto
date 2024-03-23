@@ -27,9 +27,8 @@
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
+    display: grid;
+    grid-template-rows: 25% 20% 20% 35%;
 
     h1 {
         margin-bottom: 0.6em;
@@ -46,7 +45,13 @@ form {
         font-weight: 600;
         margin: auto 0 auto auto;
         padding: 0.2em 0.6em;
-        width: fit-content;
+        width: 18rem;
+    }
+
+    u-spinner {
+        margin: auto 4rem auto auto;
+        width: 10rem;
+        height: 2.2rem;
     }
 }
 

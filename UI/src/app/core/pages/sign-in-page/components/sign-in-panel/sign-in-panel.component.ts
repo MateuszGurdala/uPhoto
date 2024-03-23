@@ -4,8 +4,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IconDirective } from '../../../../../shared/directives/icon.directive';
 import { InputComponent } from '../../../../../shared/components/input/input.component';
-import { NgOptimizedImage } from '@angular/common';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SpinnerComponent } from '../../../../../shared/components/spinner/spinner.component';
 
 @Component({
 	selector: 'u-sign-in-panel',
@@ -16,7 +17,9 @@ import { RouterLink } from '@angular/router';
 		InputComponent,
 		NgOptimizedImage,
 		ReactiveFormsModule,
-		RouterLink
+		RouterLink,
+		NgIf,
+		SpinnerComponent
 	],
 	templateUrl: './sign-in-panel.component.html',
 	styleUrl: './sign-in-panel.component.css'
@@ -35,6 +38,10 @@ export class SignInPanelComponent {
 		private accountService: AccountService,
 		private formBuilder: FormBuilder,
 	) {
+	}
+
+	public get isProcessingRequest(): boolean {
+		return this.accountService.isProcessing;
 	}
 
 	public onSignIn(): void {

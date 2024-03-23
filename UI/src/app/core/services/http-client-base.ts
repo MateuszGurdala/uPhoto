@@ -1,12 +1,25 @@
+import {
+	catchError,
+	EMPTY,
+	map,
+	Observable,
+	ObservedValueOf,
+	of,
+	pipe,
+	Subject,
+	switchMap,
+	take,
+	UnaryFunction,
+} from 'rxjs';
 import { ApiRequestOptionsModel } from '../../shared/models/api/api-request-options.model';
 import { ApiResponseModel } from '../../shared/models/api/api-response.model';
 import { Directive } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { appClientConfig } from '../../app.config';
-import { catchError, EMPTY, map, Observable, ObservedValueOf, of, pipe, switchMap, take, UnaryFunction } from 'rxjs';
 
 @Directive()
 export class HttpClientBase {
+	protected readonly errorTopic: Subject<void> = new Subject<void>();
 	private readonly headers: HttpHeaders = new HttpHeaders({
 		'Content-Type': 'application/json'
 	});
@@ -19,6 +32,7 @@ export class HttpClientBase {
 			Observable<ObservedValueOf<Observable<ApiResponseModel<any>>>>> {
 		return pipe(
 			catchError((err, caught: Observable<ApiResponseModel<any>>) => {
+				this.errorTopic.next();
 				return EMPTY;
 			}),
 			switchMap((response: ApiResponseModel<any>): Observable<ApiResponseModel<any>> => response.status === 200 ? of(response) : EMPTY),

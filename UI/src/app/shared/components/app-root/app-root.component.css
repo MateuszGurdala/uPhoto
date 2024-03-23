@@ -3,16 +3,16 @@
 }
 
 u-header {
-    div {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        gap: 2em;
+    span {
         margin-left: auto;
+        font-size: 6em;
+        margin-right: 1rem;
     }
 
-    span {
-        font-size: 6em;
+    u-spinner {
+        margin-left: auto;
+        width: 8rem;
+        height: 2rem;
     }
 }
 

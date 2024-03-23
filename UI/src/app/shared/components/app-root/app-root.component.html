@@ -1,7 +1,6 @@
 <u-header>
-    <div>
-        <span (click)="onSignOut()" uIcon uTextColorReact>logout</span>
-    </div>
+    <u-spinner *ngIf="isProcessingRequest"/>
+    <span (click)="onSignOut()" *ngIf="!isProcessingRequest" uIcon uTextColorReact>logout</span>
 </u-header>
 <section #appSection>
     <router-outlet/>

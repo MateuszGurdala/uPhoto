@@ -5,8 +5,9 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { IconDirective } from '../../directives/icon.directive';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { SpinnerComponent } from '../spinner/spinner.component';
 import { TextColorReactDirective } from '../../directives/text-color-react.directive';
 
 @Component({
@@ -21,7 +22,9 @@ import { TextColorReactDirective } from '../../directives/text-color-react.direc
 		NavbarComponent,
 		NgClass,
 		RouterOutlet,
-		AppsModalComponent
+		AppsModalComponent,
+		SpinnerComponent,
+		NgIf
 	],
 	templateUrl: './app-root.component.html',
 	styleUrl: './app-root.component.css'
@@ -29,6 +32,10 @@ import { TextColorReactDirective } from '../../directives/text-color-react.direc
 export class AppRootComponent {
 
 	constructor(private accountService: AccountService) {
+	}
+
+	public get isProcessingRequest(): boolean {
+		return this.accountService.isProcessing;
 	}
 
 	public onSignOut(): void {
