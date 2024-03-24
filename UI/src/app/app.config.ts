@@ -2,6 +2,7 @@ import { ApplicationConfig } from '@angular/core';
 import { HttpProvider } from './core/providers/http.provider.const';
 import { InterceptorsProvider } from './core/providers/interceptors.provider.const';
 import { LazyLoadingProvider } from './core/providers/lazy-loading.provider.const';
+import { MiscProvider } from './core/providers/misc.provider.const';
 import { RouterProvider } from './core/providers/router.provider.const';
 
 export const appClientConfig = {
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
 		HttpProvider,
 		InterceptorsProvider,
 		LazyLoadingProvider,
-		RouterProvider
+		RouterProvider,
+		MiscProvider
 	]
 };
