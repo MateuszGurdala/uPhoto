@@ -8,13 +8,19 @@ import moment, { Moment } from 'moment';
 export class AuthService {
 	public set expirationDate(date: Moment | null) {
 		!!date
-			? localStorage.setItem(StorageKeys.SessionExpirationDate, String(date))
-			: localStorage.removeItem(StorageKeys.SessionExpirationDate);
+			? this.storage?.setItem(StorageKeys.SessionExpirationDate, String(date))
+			: this.storage?.removeItem(StorageKeys.SessionExpirationDate);
 	}
 
 	public get getExpirationDate(): Moment | null {
-		const date: string | null = localStorage.getItem(StorageKeys.SessionExpirationDate);
+		const date: string | null | undefined = this.storage?.getItem(StorageKeys.SessionExpirationDate);
 		return date ? moment(date) : null;
+	}
+
+	private get storage(): Storage | null {
+		return typeof window !== 'undefined'
+			? localStorage
+			: null;
 	}
 
 	public isSessionValid(): boolean {
