@@ -9,6 +9,9 @@
     "test": "ng test",
     "serve:ssr:uPhoto": "node dist/u-photo/server/server.mjs"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.2.0",
